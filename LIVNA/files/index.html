@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Livna — Bespoke fashion crafted from a blank canvas. Custom designs created with artisanal precision for the individual who refuses the ordinary." />
+  <title>Livna — Bespoke Fashion from a Blank Canvas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Livna home">Livn<span>a</span></a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html"    class="nav__link">Home</a></li>
+        <li><a href="portfolio.html" class="nav__link">Works</a></li>
+        <li><a href="advice.html"   class="nav__link">Journal</a></li>
+        <li><a href="order.html"    class="nav__cta">Commission</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+    <a href="index.html"     class="nav__link">Home</a>
+    <a href="portfolio.html" class="nav__link">Works</a>
+    <a href="advice.html"    class="nav__link">Journal</a>
+    <a href="order.html"     class="nav__link">Commission a Piece</a>
+  </div>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero__bg">
+        <div class="hero__texture"></div>
+      </div>
+
+      <div class="container hero__content">
+        <div class="hero__left">
+          <p class="eyebrow animate-fadeUp">Atelier · Est. Lagos</p>
+          <h1 class="display-1 animate-fadeUp animate-delay-1">
+            Born<br/>
+            from a<br/>
+            <em>blank</em><br/>
+            canvas.
+          </h1>
+          <p class="body-lg hero__sub animate-fadeUp animate-delay-2">
+            Every Livna piece begins where imagination has no limit—
+            bespoke fashion conceived entirely for you.
+          </p>
+          <div class="hero__actions animate-fadeUp animate-delay-3">
+            <a href="portfolio.html" class="btn btn-primary">
+              View Works <span class="btn-icon" aria-hidden="true"></span>
+            </a>
+            <a href="order.html" class="btn btn-outline">
+              Commission
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__right animate-fadeUp animate-delay-2">
+          <div class="hero__image-frame">
+            <div class="hero__image-placeholder">
+              <img src="../nuit%20cape.jpg" alt="Livna bespoke fashion piece" class="hero__real-img" />
+            </div>
+            <div class="hero__image-tag">
+              <span class="eyebrow">Current Season</span>
+              <p>The Blank Canvas Collection</p>
+            </div>
+          </div>
+          <div class="hero__scroll-indicator" aria-hidden="true">
+            <div class="hero__scroll-line"></div>
+            <span>Scroll</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating brand elements -->
+      <div class="hero__deco-1" aria-hidden="true">001</div>
+      <div class="hero__deco-2" aria-hidden="true">
+        <span>Handcrafted</span>
+        <span>·</span>
+        <span>Unique</span>
+        <span>·</span>
+        <span>Yours</span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         MARQUEE
+    ═══════════════════════════════════════════ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Bespoke Design</span>
+        <span class="marquee__dot">·</span>
+        <span>Artisanal Craft</span>
+        <span class="marquee__dot">·</span>
+        <span>Custom Fit</span>
+        <span class="marquee__dot">·</span>
+        <span>Your Vision</span>
+        <span class="marquee__dot">·</span>
+        <span>Our Canvas</span>
+        <span class="marquee__dot">·</span>
+        <span>Bespoke Design</span>
+        <span class="marquee__dot">·</span>
+        <span>Artisanal Craft</span>
+        <span class="marquee__dot">·</span>
+        <span>Custom Fit</span>
+        <span class="marquee__dot">·</span>
+        <span>Your Vision</span>
+        <span class="marquee__dot">·</span>
+        <span>Our Canvas</span>
+        <span class="marquee__dot">·</span>
+        <span>Bespoke Design</span>
+        <span class="marquee__dot">·</span>
+        <span>Artisanal Craft</span>
+        <span class="marquee__dot">·</span>
+        <span>Custom Fit</span>
+        <span class="marquee__dot">·</span>
+        <span>Your Vision</span>
+        <span class="marquee__dot">·</span>
+        <span>Our Canvas</span>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PHILOSOPHY
+    ═══════════════════════════════════════════ -->
+    <section class="philosophy section-pad" aria-labelledby="philosophy-heading">
+      <div class="container">
+        <div class="philosophy__grid">
+          <div class="philosophy__left reveal">
+            <span class="deco-number">01</span>
+          </div>
+          <div class="philosophy__right">
+            <p class="eyebrow reveal">Our Philosophy</p>
+            <h2 class="display-2 reveal" id="philosophy-heading">
+              Fashion as an act<br/>
+              of <em>pure creation.</em>
+            </h2>
+            <div class="divider divider-left reveal"></div>
+            <p class="body-lg reveal">
+              We do not begin with patterns inherited from other hands.
+              Every Livna commission starts from nothing—a conversation,
+              a feeling, a vision that belongs only to you.
+            </p>
+            <p class="body-lg reveal" style="margin-top: 20px;">
+              Our atelier treats each piece as a singular work of art,
+              fusing traditional craft with an uncompromising modern
+              sensibility. The result is not fashion. It is identity
+              made visible.
+            </p>
+            <a href="portfolio.html" class="btn btn-outline reveal" style="margin-top: 40px;">
+              See the Work <span class="btn-icon" aria-hidden="true"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PROCESS
+    ═══════════════════════════════════════════ -->
+    <section class="process section-pad" aria-labelledby="process-heading" style="background: var(--obsidian);">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 70px;">
+          <p class="eyebrow reveal">The Livna Method</p>
+          <h2 class="display-2 reveal" id="process-heading" style="color: var(--ivory);">
+            Four steps to<br/><em>something extraordinary.</em>
+          </h2>
+        </div>
+
+        <div class="process__steps">
+          <article class="process__step reveal" data-delay="0">
+            <div class="process__num">01</div>
+            <h3 class="process__title">Conversation</h3>
+            <p class="process__desc">
+              We begin with you. A dialogue about your vision, occasion, silhouette, and spirit. Every detail matters before a single thread is touched.
+            </p>
+          </article>
+          <article class="process__step reveal" data-delay="120">
+            <div class="process__num">02</div>
+            <h3 class="process__title">Conception</h3>
+            <p class="process__desc">
+              Our designers translate your vision into original sketches and material selections—fabrics sourced for their quality and character.
+            </p>
+          </article>
+          <article class="process__step reveal" data-delay="240">
+            <div class="process__num">03</div>
+            <h3 class="process__title">Creation</h3>
+            <p class="process__desc">
+              The piece takes form through artisanal hands. Precision cutting, fitting, and hand-finishing at every stage. No shortcuts. No compromises.
+            </p>
+          </article>
+          <article class="process__step reveal" data-delay="360">
+            <div class="process__num">04</div>
+            <h3 class="process__title">Delivery</h3>
+            <p class="process__desc">
+              Your piece arrives wrapped and documented—a record of its creation, materials, and measurements, for alterations or replication.
+            </p>
+          </article>
+        </div>
+
+        <div class="text-center" style="margin-top: 60px;">
+          <a href="order.html" class="btn btn-champagne reveal">
+            Begin Your Commission <span class="btn-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         FEATURED WORKS
+    ═══════════════════════════════════════════ -->
+    <section class="featured section-pad" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="featured__header reveal">
+          <div>
+            <p class="eyebrow">Selected Works</p>
+            <h2 class="display-2" id="featured-heading">Recent commissions.</h2>
+          </div>
+          <a href="portfolio.html" class="btn btn-outline">
+            Full Portfolio <span class="btn-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div class="featured__grid">
+          <!-- Work 1 -->
+          <article class="featured__item featured__item--large reveal">
+            <div class="featured__image">
+              <div class="featured__image-fill">
+                <img src="../eclat-gown.jpg" alt="The Éclat Gown — commissioned evening piece" class="featured__img" />
+              </div>
+            </div>
+            <div class="featured__meta">
+              <span class="eyebrow">Evening · Silk</span>
+              <h3 class="display-3">The Éclat Gown</h3>
+              <p>Commissioned for a private gala. Hand-draped ivory silk with asymmetric shoulder detail.</p>
+            </div>
+          </article>
+
+          <!-- Work 2 -->
+          <article class="featured__item reveal" data-delay="100">
+            <div class="featured__image">
+              <div class="featured__image-fill">
+                <img src="../obsidian-suit.jpg" alt="The Noir Suit — sculpted two-piece" class="featured__img" />
+              </div>
+            </div>
+            <div class="featured__meta">
+              <span class="eyebrow">Formal · Wool Crepe</span>
+              <h3>The Noir Suit</h3>
+              <p>A sculpted two-piece in deep midnight wool. Tailored to precision.</p>
+            </div>
+          </article>
+
+          <!-- Work 3 -->
+          <article class="featured__item reveal" data-delay="200">
+            <div class="featured__image">
+              <div class="featured__image-fill">
+                <img src="../doceur-gown.jpg" alt="The Douceur Dress — custom bridal creation" class="featured__img" />
+              </div>
+            </div>
+            <div class="featured__meta">
+              <span class="eyebrow">Bridal · Duchess Satin</span>
+              <h3>The Douceur Dress</h3>
+              <p>Custom bridal creation. Softly structured with cathedral length.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         TESTIMONIALS
+    ═══════════════════════════════════════════ -->
+    <section class="testimonials section-pad" aria-labelledby="testimonials-heading" style="background: var(--ivory-deep);">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 60px;">
+          <p class="eyebrow reveal">Client Stories</p>
+          <h2 class="display-3 reveal" id="testimonials-heading">What they say.</h2>
+        </div>
+
+        <div class="testimonials__grid">
+          <blockquote class="testimonial reveal">
+            <div class="testimonial__stars" aria-label="5 stars">★★★★★</div>
+            <p class="testimonial__text">
+              "Livna created something I had only imagined. The process was
+              intimate, almost ceremonial. I wore the piece once and
+              everyone asked who made it."
+            </p>
+            <footer class="testimonial__author">
+              <div class="testimonial__initials" aria-hidden="true">AO</div>
+              <div>
+                <strong>Adaeze Okonkwo</strong>
+                <span>Lagos, Nigeria</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial reveal" data-delay="150">
+            <div class="testimonial__stars" aria-label="5 stars">★★★★★</div>
+            <p class="testimonial__text">
+              "I have worked with several designers, but nothing compares
+              to the Livna experience. Every stitch is intentional.
+              Every detail considered. True artisanship."
+            </p>
+            <footer class="testimonial__author">
+              <div class="testimonial__initials" aria-hidden="true">ZB</div>
+              <div>
+                <strong>Zineb Boufrous</strong>
+                <span>Casablanca, Morocco</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial reveal" data-delay="300">
+            <div class="testimonial__stars" aria-label="5 stars">★★★★★</div>
+            <p class="testimonial__text">
+              "The gown arrived and I literally wept. It was exactly the
+              vision I described—and somehow more. Livna translates
+              feeling into fabric."
+            </p>
+            <footer class="testimonial__author">
+              <div class="testimonial__initials" aria-hidden="true">IM</div>
+              <div>
+                <strong>Ifeoma Madu</strong>
+                <span>Abuja, Nigeria</span>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CTA BANNER
+    ═══════════════════════════════════════════ -->
+    <section class="cta-banner" aria-labelledby="cta-heading" style="background: var(--obsidian); padding: 100px 0; position: relative; overflow: hidden;">
+      <div class="cta-banner__bg" aria-hidden="true"></div>
+      <div class="container text-center" style="position: relative; z-index: 1;">
+        <p class="eyebrow reveal" style="color: var(--champagne);">Your turn</p>
+        <h2 class="display-2 reveal" id="cta-heading" style="color: var(--ivory); margin: 20px 0 16px;">
+          Commission your<br/><em>masterpiece.</em>
+        </h2>
+        <p class="body-lg reveal" style="max-width: 480px; margin: 0 auto 40px;">
+          Every blank canvas becomes something irreplaceable.
+          Tell us your vision. We'll do the rest.
+        </p>
+        <div class="reveal" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+          <a href="order.html" class="btn btn-champagne">
+            Start a Commission <span class="btn-icon" aria-hidden="true"></span>
+          </a>
+          <a href="portfolio.html" class="btn" style="border: 1px solid rgba(255,255,255,0.25); color: var(--ivory);">
+            Browse the Portfolio
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">Livn<span>a</span></div>
+          <p class="footer__tagline">
+            A bespoke fashion atelier creating beautiful,
+            unique designs from a blank canvas.
+            Every piece is a singular act of creation.
+          </p>
+          <div class="footer__social" role="list" aria-label="Social media">
+            <a href="#" class="footer__social-link" role="listitem" aria-label="Instagram">IG</a>
+            <a href="#" class="footer__social-link" role="listitem" aria-label="Pinterest">PT</a>
+            <a href="#" class="footer__social-link" role="listitem" aria-label="Twitter">TW</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__heading">Navigate</h3>
+          <a href="index.html"     class="footer__link">Home</a>
+          <a href="portfolio.html" class="footer__link">Our Works</a>
+          <a href="advice.html"    class="footer__link">Style Journal</a>
+          <a href="order.html"     class="footer__link">Commission</a>
+        </div>
+        <div>
+          <h3 class="footer__heading">Atelier</h3>
+          <a href="#" class="footer__link">About Livna</a>
+          <a href="#" class="footer__link">The Process</a>
+          <a href="#" class="footer__link">Materials</a>
+          <a href="#" class="footer__link">Contact</a>
+        </div>
+        <div>
+          <h3 class="footer__heading">The Journal</h3>
+          <p class="footer__tagline" style="max-width: 100%; font-size: 0.82rem;">
+            Subscribe for style insights, new commissions, and atelier notes.
+          </p>
+          <div class="footer__newsletter">
+            <input type="email" placeholder="Your email address" aria-label="Email for newsletter" />
+            <button type="button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2025 Livna. All rights reserved.</p>
+        <p class="footer__copy">Crafted with intention, Lagos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast notification container -->
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
