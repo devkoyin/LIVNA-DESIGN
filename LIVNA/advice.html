@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Livna Journal — style guides, material education, trend analysis, and fashion advice from our atelier. A creative authority on bespoke fashion." />
+  <title>Style Journal — Livna Bespoke Fashion</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/advice.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Livna home">Livn<span>a</span></a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html"     class="nav__link">Home</a></li>
+        <li><a href="portfolio.html" class="nav__link">Works</a></li>
+        <li><a href="advice.html"    class="nav__link">Journal</a></li>
+        <li><a href="order.html"     class="nav__cta">Commission</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav__mobile" role="dialog">
+    <a href="index.html"     class="nav__link">Home</a>
+    <a href="portfolio.html" class="nav__link">Works</a>
+    <a href="advice.html"    class="nav__link">Journal</a>
+    <a href="order.html"     class="nav__link">Commission a Piece</a>
+  </div>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
+    <section class="advice-hero page-hero" aria-labelledby="advice-hero-heading">
+      <div class="container advice-hero__inner">
+        <div class="advice-hero__text">
+          <p class="eyebrow animate-fadeUp">The Livna Journal</p>
+          <h1 class="display-1 animate-fadeUp animate-delay-1" id="advice-hero-heading">
+            Style,<br/><em>studied.</em>
+          </h1>
+          <p class="body-lg animate-fadeUp animate-delay-2" style="max-width: 420px;">
+            Essays on material, craft, silhouette, and the evolving
+            language of fashion — written from inside the atelier.
+          </p>
+        </div>
+        <div class="advice-hero__featured animate-fadeUp animate-delay-2">
+          <article class="advice-hero__feature-card" aria-label="Featured article">
+            <div class="advice-hero__feature-img" aria-hidden="true">
+              <svg viewBox="0 0 500 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="500" height="320" fill="#1A1A17"/>
+                <!-- Fabric fold illustration -->
+                <path d="M0 320 Q100 200 200 240 Q300 280 400 160 Q450 100 500 120 L500 320Z" fill="#C9A96E" opacity="0.12"/>
+                <path d="M0 320 Q80 220 180 260 Q280 300 380 180 Q430 120 500 140" stroke="#C9A96E" stroke-width="1" fill="none"/>
+                <text x="250" y="140" text-anchor="middle" fill="#C9A96E" font-family="Georgia, serif" font-size="11" font-style="italic" letter-spacing="4" opacity="0.8">The Weight of Fabric</text>
+                <text x="250" y="165" text-anchor="middle" fill="#8A8880" font-family="Georgia, serif" font-size="9" letter-spacing="2">on choosing what touches your skin</text>
+              </svg>
+            </div>
+            <div class="advice-hero__feature-body">
+              <div class="advice-hero__feature-meta">
+                <span class="eyebrow">Material Guide</span>
+                <span class="advice-date">May 2025</span>
+              </div>
+              <h2 class="advice-hero__feature-title">The Weight of Fabric: A Sensory Guide to Material Selection</h2>
+              <p class="advice-hero__feature-sub">
+                Before colour, before cut, before silhouette — there is the question of what a garment feels like against skin. Our head designer on the hierarchy of material decisions.
+              </p>
+              <button class="btn btn-outline advice-read-btn" onclick="openArticle('fabric-weight')" aria-label="Read The Weight of Fabric">
+                Read Article <span class="btn-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         STYLE QUIZ CTA
+    ═══════════════════════════════════════════ -->
+    <div class="quiz-banner" aria-label="Style quiz promotion">
+      <div class="container quiz-banner__inner">
+        <div class="quiz-banner__text reveal">
+          <p class="eyebrow">Discover Your Aesthetic</p>
+          <p class="quiz-banner__title">Not sure where to begin? <em>Take the Livna Style Quiz.</em></p>
+          <p class="quiz-banner__sub">Seven questions. A personalised style direction and material recommendation, from our atelier.</p>
+        </div>
+        <button class="btn btn-champagne reveal" id="quiz-launch-btn" onclick="launchQuiz()" aria-haspopup="dialog">
+          Start the Quiz <span class="btn-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         JOURNAL FILTER + GRID
+    ═══════════════════════════════════════════ -->
+    <section class="journal section-pad" aria-labelledby="journal-heading">
+      <div class="container">
+        <div class="journal__header reveal">
+          <h2 class="display-3" id="journal-heading">All Articles</h2>
+          <div class="journal__filters" role="tablist" aria-label="Filter articles by category">
+            <button class="journal-filter active" data-cat="all" role="tab" aria-selected="true">All</button>
+            <button class="journal-filter" data-cat="materials" role="tab" aria-selected="false">Materials</button>
+            <button class="journal-filter" data-cat="styling" role="tab" aria-selected="false">Styling</button>
+            <button class="journal-filter" data-cat="trends" role="tab" aria-selected="false">Trends</button>
+            <button class="journal-filter" data-cat="craft" role="tab" aria-selected="false">Craft</button>
+            <button class="journal-filter" data-cat="culture" role="tab" aria-selected="false">Culture</button>
+          </div>
+        </div>
+
+        <div class="journal__grid" id="journal-grid" role="list">
+
+          <!-- Article 1 -->
+          <article class="journal__card reveal" data-cat="materials" role="listitem">
+            <div class="journal__card-img" style="background: #1A1A17;" aria-hidden="true">
+              <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="240" fill="#1A1A17"/>
+                <path d="M0 180 Q80 120 160 150 Q240 180 320 100 Q360 60 400 80 L400 240 L0 240Z" fill="#C9A96E" opacity="0.15"/>
+                <text x="200" y="110" text-anchor="middle" fill="#C9A96E" font-family="Georgia, serif" font-size="10" font-style="italic" letter-spacing="3" opacity="0.7">Silk</text>
+              </svg>
+            </div>
+            <div class="journal__card-body">
+              <div class="journal__card-meta">
+                <span class="journal__cat-tag">Materials</span>
+                <span class="advice-date">May 2025</span>
+              </div>
+              <h3 class="journal__card-title">The Weight of Fabric: A Sensory Guide to Material Selection</h3>
+              <p class="journal__card-excerpt">Before colour, before cut — there is the question of what a garment feels like. Our head designer on the hierarchy of material decisions.</p>
+              <button class="journal__read-link" onclick="openArticle('fabric-weight')" aria-label="Read The Weight of Fabric">
+                Read <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="journal__card reveal" data-cat="styling" role="listitem" data-delay="80">
+            <div class="journal__card-img" style="background: #F2EAD8;" aria-hidden="true">
+              <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="240" fill="#F2EAD8"/>
+                <rect x="100" y="40" width="80" height="160" rx="1" fill="#C9A96E" opacity="0.2"/>
+                <rect x="220" y="70" width="80" height="130" rx="1" fill="#8A8880" opacity="0.15"/>
+                <line x1="140" y1="200" x2="260" y2="200" stroke="#C9A96E" stroke-width="0.5"/>
+                <text x="200" y="130" text-anchor="middle" fill="#8A8880" font-family="Georgia, serif" font-size="10" font-style="italic" letter-spacing="2">Proportion</text>
+              </svg>
+            </div>
+            <div class="journal__card-body">
+              <div class="journal__card-meta">
+                <span class="journal__cat-tag">Styling</span>
+                <span class="advice-date">Apr 2025</span>
+              </div>
+              <h3 class="journal__card-title">Proportion as Language: Why Fit Communicates Before You Speak</h3>
+              <p class="journal__card-excerpt">The difference between clothing that merely covers and clothing that commands attention lies almost entirely in proportion.</p>
+              <button class="journal__read-link" onclick="openArticle('proportion')" aria-label="Read Proportion as Language">
+                Read <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="journal__card reveal" data-cat="culture" role="listitem" data-delay="160">
+            <div class="journal__card-img" style="background: #2D1810;" aria-hidden="true">
+              <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="240" fill="#2D1810"/>
+                <line x1="0" y1="60"  x2="400" y2="60"  stroke="#C9A96E" stroke-width="0.5" opacity="0.4"/>
+                <line x1="0" y1="100" x2="400" y2="100" stroke="#C9A96E" stroke-width="0.5" opacity="0.4"/>
+                <line x1="0" y1="140" x2="400" y2="140" stroke="#C9A96E" stroke-width="0.5" opacity="0.4"/>
+                <line x1="0" y1="180" x2="400" y2="180" stroke="#C9A96E" stroke-width="0.5" opacity="0.4"/>
+                <path d="M0 80 L400 200" stroke="#8A6A3C" stroke-width="1" opacity="0.4"/>
+                <path d="M0 120 L400 240" stroke="#8A6A3C" stroke-width="1" opacity="0.3"/>
+                <text x="200" y="125" text-anchor="middle" fill="#C9A96E" font-family="Georgia, serif" font-size="10" font-style="italic" letter-spacing="3" opacity="0.8">Heritage</text>
+              </svg>
+            </div>
+            <div class="journal__card-body">
+              <div class="journal__card-meta">
+                <span class="journal__cat-tag">Culture</span>
+                <span class="advice-date">Apr 2025</span>
+              </div>
+              <h3 class="journal__card-title">Aso-Oke Reimagined: Heritage Weaving in the Contemporary Wardrobe</h3>
+              <p class="journal__card-excerpt">The ancient Yoruba handloom tradition is experiencing a renaissance — not through preservation alone, but through creative reinvention.</p>
+              <button class="journal__read-link" onclick="openArticle('aso-oke')" aria-label="Read Aso-Oke Reimagined">
+                Read <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="journal__card reveal" data-cat="craft" role="listitem" data-delay="0">
+            <div class="journal__card-img" style="background: #EDE9DF;" aria-hidden="true">
+              <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="240" fill="#EDE9DF"/>
+                <circle cx="200" cy="120" r="70" fill="none" stroke="#C9A96E" stroke-width="0.5" stroke-dasharray="4,4"/>
+                <circle cx="200" cy="120" r="40" fill="none" stroke="#8A8880" stroke-width="0.5"/>
+                <line x1="200" y1="50" x2="200" y2="190" stroke="#C9A96E" stroke-width="0.5" opacity="0.5"/>
+                <line x1="130" y1="120" x2="270" y2="120" stroke="#C9A96E" stroke-width="0.5" opacity="0.5"/>
+                <text x="200" y="124" text-anchor="middle" fill="#8A8880" font-family="Georgia, serif" font-size="9" font-style="italic" letter-spacing="2">pattern</text>
+              </svg>
+            </div>
+            <div class="journal__card-body">
+              <div class="journal__card-meta">
+                <span class="journal__cat-tag">Craft</span>
+                <span class="advice-date">Mar 2025</span>
+              </div>
+              <h3 class="journal__card-title">The Invisible Work: What Happens Between Sketch and Seam</h3>
+              <p class="journal__card-excerpt">Pattern-making is the most misunderstood stage of garment creation. It is also the one most responsible for whether a design lives or dies.</p>
+              <button class="journal__read-link" onclick="openArticle('invisible-work')" aria-label="Read The Invisible Work">
+                Read <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Article 5 -->
+          <article class="journal__card reveal" data-cat="trends" role="listitem" data-delay="80">
+            <div class="journal__card-img" style="background: #151525;" aria-hidden="true">
+              <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="240" fill="#151525"/>
+                <path d="M50 200 Q100 100 150 140 Q200 180 250 80 Q300 0 350 60 Q380 100 400 80" stroke="#534AB7" stroke-width="1.5" fill="none" opacity="0.6"/>
+                <path d="M50 200 Q100 120 160 160 Q220 200 280 110 Q320 50 400 100" stroke="#C9A96E" stroke-width="1" fill="none" opacity="0.4"/>
+                <text x="200" y="200" text-anchor="middle" fill="#8888CC" font-family="Georgia, serif" font-size="9" font-style="italic" letter-spacing="3" opacity="0.7">2025 → 2026</text>
+              </svg>
+            </div>
+            <div class="journal__card-body">
+              <div class="journal__card-meta">
+                <span class="journal__cat-tag">Trends</span>
+                <span class="advice-date">Mar 2025</span>
+              </div>
+              <h3 class="journal__card-title">What Endures: On Trend-Resistance and Building a Lasting Wardrobe</h3>
+              <p class="journal__card-excerpt">The fashion calendar moves faster than ever. An argument for ignoring it entirely — and how bespoke commissioning is the ultimate act of trend-resistance.</p>
+              <button class="journal__read-link" onclick="openArticle('trend-resistance')" aria-label="Read What Endures">
+                Read <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Article 6 -->
+          <article class="journal__card reveal" data-cat="styling" role="listitem" data-delay="160">
+            <div class="journal__card-img" style="background: #F7F4EE;" aria-hidden="true">
+              <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="400" height="240" fill="#F7F4EE"/>
+                <rect x="80"  y="50" width="90" height="140" rx="1" fill="#C9A96E" opacity="0.15"/>
+                <rect x="230" y="50" width="90" height="140" rx="1" fill="#0E0E0C" opacity="0.08"/>
+                <line x1="175" y1="50" x2="230" y2="50"   stroke="#C9A96E" stroke-width="0.5"/>
+                <line x1="175" y1="190" x2="230" y2="190" stroke="#C9A96E" stroke-width="0.5"/>
+                <text x="202" y="128" text-anchor="middle" fill="#8A8880" font-family="Georgia, serif" font-size="9" font-style="italic" letter-spacing="2">contrast</text>
+              </svg>
+            </div>
+            <div class="journal__card-body">
+              <div class="journal__card-meta">
+                <span class="journal__cat-tag">Styling</span>
+                <span class="advice-date">Feb 2025</span>
+              </div>
+              <h3 class="journal__card-title">Colour and Contrast: The Atelier's Theory of the Tonal Palette</h3>
+              <p class="journal__card-excerpt">Most people dress in colour without understanding it. On why tonal dressing isn't boring — it's the most sophisticated choice you can make.</p>
+              <button class="journal__read-link" onclick="openArticle('colour-contrast')" aria-label="Read Colour and Contrast">
+                Read <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Load more -->
+        <div class="journal__more reveal" style="text-align:center; margin-top: 60px;">
+          <button class="btn btn-outline" id="load-more-btn" onclick="loadMoreArticles()">
+            Load More Articles
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         MATERIAL EDUCATION MODULE
+    ═══════════════════════════════════════════ -->
+    <section class="materials-edu section-pad" style="background: var(--obsidian);" aria-labelledby="materials-heading">
+      <div class="container">
+        <div class="text-center" style="margin-bottom: 60px;">
+          <p class="eyebrow reveal" style="color: var(--champagne);">Know Your Materials</p>
+          <h2 class="display-3 reveal" id="materials-heading" style="color: var(--ivory);">
+            The Livna material library.
+          </h2>
+          <p class="body-lg reveal" style="max-width: 480px; margin: 12px auto 0;">
+            Understanding fabric is the foundation of understanding fashion. Here's what every client should know.
+          </p>
+        </div>
+
+        <div class="materials-grid">
+
+          <div class="material-card reveal" tabindex="0" role="button" aria-expanded="false" onclick="toggleMaterial(this)">
+            <div class="material-card__header">
+              <div class="material-card__swatch" style="background: linear-gradient(135deg, #E8D5B0, #C9A96E);" aria-hidden="true"></div>
+              <div>
+                <h3 class="material-card__name">Silk</h3>
+                <p class="material-card__type">Natural · Protein fibre</p>
+              </div>
+              <span class="material-card__toggle" aria-hidden="true">+</span>
+            </div>
+            <div class="material-card__body" hidden>
+              <p>Produced by silkworms, silk is the most luxurious natural fibre and the one most responsive to dye. It drapes with a fluid intelligence no synthetic can replicate, and possesses a natural sheen that catches light differently depending on movement.</p>
+              <div class="material-props">
+                <div class="material-prop"><span>Occasion</span><strong>Evening · Bridal · Formal</strong></div>
+                <div class="material-prop"><span>Care</span><strong>Dry clean or hand wash cold</strong></div>
+                <div class="material-prop"><span>Weight</span><strong>Lightweight to medium</strong></div>
+                <div class="material-prop"><span>Best for</span><strong>Draped silhouettes, gowns</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="material-card reveal" tabindex="0" role="button" aria-expanded="false" onclick="toggleMaterial(this)" data-delay="80">
+            <div class="material-card__header">
+              <div class="material-card__swatch" style="background: linear-gradient(135deg, #D8D0C0, #A09080);" aria-hidden="true"></div>
+              <div>
+                <h3 class="material-card__name">Wool Crepe</h3>
+                <p class="material-card__type">Natural · Animal fibre</p>
+              </div>
+              <span class="material-card__toggle" aria-hidden="true">+</span>
+            </div>
+            <div class="material-card__body" hidden>
+              <p>Wool crepe is the tailor's ideal canvas — firm enough to hold a sharp silhouette, yet yielding enough to move naturally with the body. Its slight texture absorbs light rather than reflecting it, giving garments a quiet authority.</p>
+              <div class="material-props">
+                <div class="material-prop"><span>Occasion</span><strong>Corporate · Formal · Tailoring</strong></div>
+                <div class="material-prop"><span>Care</span><strong>Dry clean recommended</strong></div>
+                <div class="material-prop"><span>Weight</span><strong>Medium to heavy</strong></div>
+                <div class="material-prop"><span>Best for</span><strong>Suits, structured coats</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="material-card reveal" tabindex="0" role="button" aria-expanded="false" onclick="toggleMaterial(this)" data-delay="160">
+            <div class="material-card__header">
+              <div class="material-card__swatch" style="background: linear-gradient(135deg, #2A1A2A, #4A3060);" aria-hidden="true"></div>
+              <div>
+                <h3 class="material-card__name">Velvet</h3>
+                <p class="material-card__type">Woven · Cut-pile</p>
+              </div>
+              <span class="material-card__toggle" aria-hidden="true">+</span>
+            </div>
+            <div class="material-card__body" hidden>
+              <p>Velvet's pile creates a directional sheen that changes as the wearer moves — making it one of the most visually dynamic fabrics in existence. At Livna, we use silk-backed velvet for evening pieces and cotton velvet for structured separates.</p>
+              <div class="material-props">
+                <div class="material-prop"><span>Occasion</span><strong>Evening · Winter formal</strong></div>
+                <div class="material-prop"><span>Care</span><strong>Dry clean only</strong></div>
+                <div class="material-prop"><span>Weight</span><strong>Medium to heavy</strong></div>
+                <div class="material-prop"><span>Best for</span><strong>Capes, jackets, gowns</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="material-card reveal" tabindex="0" role="button" aria-expanded="false" onclick="toggleMaterial(this)" data-delay="240">
+            <div class="material-card__header">
+              <div class="material-card__swatch" style="background: linear-gradient(135deg, #F5F0E6, #D4C9A8);" aria-hidden="true"></div>
+              <div>
+                <h3 class="material-card__name">Linen</h3>
+                <p class="material-card__type">Natural · Bast fibre</p>
+              </div>
+              <span class="material-card__toggle" aria-hidden="true">+</span>
+            </div>
+            <div class="material-card__body" hidden>
+              <p>Linen is the most honest fabric — it shows every crease and wears every wash with a graceful patina. Lightweight and breathable, it is indispensable for warm-climate dressing and the foundation of Livna's resort and casual couture collections.</p>
+              <div class="material-props">
+                <div class="material-prop"><span>Occasion</span><strong>Casual · Resort · Daywear</strong></div>
+                <div class="material-prop"><span>Care</span><strong>Machine wash or hand wash</strong></div>
+                <div class="material-prop"><span>Weight</span><strong>Lightweight</strong></div>
+                <div class="material-prop"><span>Best for</span><strong>Co-ords, shirts, wide trousers</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="material-card reveal" tabindex="0" role="button" aria-expanded="false" onclick="toggleMaterial(this)" data-delay="0">
+            <div class="material-card__header">
+              <div class="material-card__swatch" style="background: linear-gradient(135deg, #6B3020, #4A1A10);" aria-hidden="true"></div>
+              <div>
+                <h3 class="material-card__name">Aso-Oke</h3>
+                <p class="material-card__type">Handloom · Yoruba heritage</p>
+              </div>
+              <span class="material-card__toggle" aria-hidden="true">+</span>
+            </div>
+            <div class="material-card__body" hidden>
+              <p>Aso-Oke (àṣọ oke — "top cloth" in Yoruba) is hand-woven in narrow strips on a loom, then joined to form fabric. Each weaver's work is distinctive. The fabric carries ritual significance and is traditionally worn for celebrations. At Livna, we work directly with master weavers in Iseyin, Oyo State.</p>
+              <div class="material-props">
+                <div class="material-prop"><span>Occasion</span><strong>Cultural ceremonies · Celebrations</strong></div>
+                <div class="material-prop"><span>Care</span><strong>Dry clean or gentle hand wash</strong></div>
+                <div class="material-prop"><span>Weight</span><strong>Medium</strong></div>
+                <div class="material-prop"><span>Best for</span><strong>Geles, agbadas, modern silhouettes</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="material-card reveal" tabindex="0" role="button" aria-expanded="false" onclick="toggleMaterial(this)" data-delay="80">
+            <div class="material-card__header">
+              <div class="material-card__swatch" style="background: linear-gradient(135deg, #F5F5F5, #E0E0D8);" aria-hidden="true"></div>
+              <div>
+                <h3 class="material-card__name">Duchess Satin</h3>
+                <p class="material-card__type">Woven · Heavyweight</p>
+              </div>
+              <span class="material-card__toggle" aria-hidden="true">+</span>
+            </div>
+            <div class="material-card__body" hidden>
+              <p>Duchess satin has a structured body that holds shape without relying entirely on internal boning. Its high lustre and smooth surface make it the classical choice for bridal and formal evening wear. It photographs exceptionally — the texture reads as pure light.</p>
+              <div class="material-props">
+                <div class="material-prop"><span>Occasion</span><strong>Bridal · Formal · Evening</strong></div>
+                <div class="material-prop"><span>Care</span><strong>Dry clean only</strong></div>
+                <div class="material-prop"><span>Weight</span><strong>Heavy</strong></div>
+                <div class="material-prop"><span>Best for</span><strong>Bridal gowns, ball skirts</strong></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         STYLE GUIDES
+    ═══════════════════════════════════════════ -->
+    <section class="style-guides section-pad" aria-labelledby="guides-heading">
+      <div class="container">
+        <div style="margin-bottom: 48px;">
+          <p class="eyebrow reveal">Atelier Advice</p>
+          <h2 class="display-3 reveal" id="guides-heading">Style guides.</h2>
+        </div>
+
+        <div class="guides-grid">
+
+          <div class="guide-card reveal">
+            <div class="guide-card__num" aria-hidden="true">I</div>
+            <h3 class="guide-card__title">Dressing for Your Body — Not a Body Type</h3>
+            <p class="guide-card__text">
+              The fashion industry spent decades mapping human bodies onto five rigid categories. We reject this entirely. At Livna, we design for the specific proportions, preferences, and personality of one person: you.
+            </p>
+            <p class="guide-card__text">
+              The key questions are: Where do you want attention drawn? What do you want concealed — not because it should be, but because you prefer it? What silhouettes make you feel like your best self? These questions yield a brief far more useful than any body-type chart.
+            </p>
+            <div class="guide-card__tips">
+              <p class="eyebrow" style="margin-bottom: 12px;">Key principles</p>
+              <ul class="guide-tips-list">
+                <li>Commission for your current body, not the body you plan to have</li>
+                <li>Consider the event, not just the dress code</li>
+                <li>The best fit is one you forget you're wearing</li>
+                <li>One perfectly fitting piece outperforms ten approximate ones</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="guide-card reveal" data-delay="120">
+            <div class="guide-card__num" aria-hidden="true">II</div>
+            <h3 class="guide-card__title">Building a Bespoke Wardrobe — A Long-term Strategy</h3>
+            <p class="guide-card__text">
+              A wardrobe built from bespoke pieces functions entirely differently from one assembled from high street or even luxury ready-to-wear. Each piece was made to work specifically with your body, your colouring, your lifestyle — which means they naturally work with each other.
+            </p>
+            <p class="guide-card__text">
+              The approach: begin with occasion. What three events in the next 12 months require you to look extraordinary? Commission for those. Over time, the gaps reveal themselves.
+            </p>
+            <div class="guide-card__tips">
+              <p class="eyebrow" style="margin-bottom: 12px;">Where to begin</p>
+              <ul class="guide-tips-list">
+                <li>Commission your highest-stakes piece first</li>
+                <li>Neutrals and monochromes travel furthest in a wardrobe</li>
+                <li>Invest in construction, not embellishment</li>
+                <li>Keep your measurement card updated after each piece</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CTA
+    ═══════════════════════════════════════════ -->
+    <section style="background: var(--ivory-deep); padding: 80px 0;">
+      <div class="container text-center">
+        <p class="eyebrow reveal">Ready to commission?</p>
+        <h2 class="display-3 reveal" style="margin: 16px 0 24px;">
+          From the journal<br/><em>to the atelier.</em>
+        </h2>
+        <p class="body-lg reveal" style="max-width: 420px; margin: 0 auto 36px;">
+          Everything you've read here informs how we work. Bring us your vision — we'll handle the rest.
+        </p>
+        <a href="order.html" class="btn btn-primary reveal">
+          Start a Commission <span class="btn-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       STYLE QUIZ MODAL
+  ═══════════════════════════════════════════ -->
+  <div class="quiz-modal" id="quiz-modal" role="dialog" aria-modal="true" aria-labelledby="quiz-title" style="display:none;">
+    <div class="quiz-modal__backdrop" onclick="closeQuiz()"></div>
+    <div class="quiz-modal__panel">
+      <button class="quiz-modal__close" onclick="closeQuiz()" aria-label="Close quiz">×</button>
+      <div id="quiz-content">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ARTICLE DRAWER -->
+  <div class="article-drawer" id="article-drawer" role="dialog" aria-modal="true" aria-labelledby="article-title" style="display:none;">
+    <div class="article-drawer__backdrop" onclick="closeArticle()"></div>
+    <div class="article-drawer__panel">
+      <button class="article-drawer__close" onclick="closeArticle()" aria-label="Close article">×</button>
+      <div id="article-content"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">Livn<span>a</span></div>
+          <p class="footer__tagline">A bespoke fashion atelier creating beautiful, unique designs from a blank canvas.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram">IG</a>
+            <a href="#" class="footer__social-link" aria-label="Pinterest">PT</a>
+            <a href="#" class="footer__social-link" aria-label="Twitter">TW</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__heading">Navigate</h3>
+          <a href="index.html"     class="footer__link">Home</a>
+          <a href="portfolio.html" class="footer__link">Our Works</a>
+          <a href="advice.html"    class="footer__link">Style Journal</a>
+          <a href="order.html"     class="footer__link">Commission</a>
+        </div>
+        <div>
+          <h3 class="footer__heading">Atelier</h3>
+          <a href="#" class="footer__link">About Livna</a>
+          <a href="#" class="footer__link">The Process</a>
+          <a href="#" class="footer__link">Materials</a>
+          <a href="#" class="footer__link">Contact</a>
+        </div>
+        <div>
+          <h3 class="footer__heading">The Journal</h3>
+          <p class="footer__tagline" style="max-width:100%;font-size:0.82rem;">Subscribe for style insights and new commissions.</p>
+          <div class="footer__newsletter">
+            <input type="email" placeholder="Your email address" aria-label="Email for newsletter"/>
+            <button type="button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2025 Livna. All rights reserved.</p>
+        <p class="footer__copy">Crafted with intention, Lagos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/advice.js"></script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse Livna's portfolio of bespoke commissions — evening wear, bridal, tailoring, and ready-to-wear designed from a blank canvas." />
+  <title>Works — Livna Bespoke Fashion</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/portfolio.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Livna home">Livn<span>a</span></a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html"    class="nav__link">Home</a></li>
+        <li><a href="portfolio.html" class="nav__link">Works</a></li>
+        <li><a href="advice.html"   class="nav__link">Journal</a></li>
+        <li><a href="order.html"    class="nav__cta">Commission</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav__mobile" role="dialog">
+    <a href="index.html"     class="nav__link">Home</a>
+    <a href="portfolio.html" class="nav__link">Works</a>
+    <a href="advice.html"    class="nav__link">Journal</a>
+    <a href="order.html"     class="nav__link">Commission a Piece</a>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="page-hero portfolio-hero" aria-labelledby="portfolio-hero-heading">
+      <div class="container">
+        <div class="portfolio-hero__content">
+          <p class="eyebrow animate-fadeUp">Portfolio</p>
+          <h1 class="display-1 animate-fadeUp animate-delay-1" id="portfolio-hero-heading">
+            Our<br/><em>Works.</em>
+          </h1>
+          <p class="body-lg animate-fadeUp animate-delay-2" style="max-width: 440px;">
+            Each piece a universe. Each commission a story
+            between a client and the craft.
+          </p>
+        </div>
+        <div class="portfolio-hero__stats animate-fadeUp animate-delay-2">
+          <div class="portfolio-stat">
+            <span class="portfolio-stat__num">240+</span>
+            <span class="portfolio-stat__label">Commissions</span>
+          </div>
+          <div class="portfolio-stat">
+            <span class="portfolio-stat__num">18</span>
+            <span class="portfolio-stat__label">Countries</span>
+          </div>
+          <div class="portfolio-stat">
+            <span class="portfolio-stat__num">100%</span>
+            <span class="portfolio-stat__label">Custom</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTER BAR -->
+    <div class="portfolio-filters" role="navigation" aria-label="Portfolio filters" id="filters">
+      <div class="container">
+        <div class="portfolio-filters__inner">
+          <div class="portfolio-filters__categories" role="list">
+            <button class="filter-btn active" data-filter="all" role="listitem">All Works</button>
+            <button class="filter-btn" data-filter="evening" role="listitem">Evening</button>
+            <button class="filter-btn" data-filter="bridal" role="listitem">Bridal</button>
+            <button class="filter-btn" data-filter="tailoring" role="listitem">Tailoring</button>
+            <button class="filter-btn" data-filter="casual" role="listitem">Casual Couture</button>
+            <button class="filter-btn" data-filter="cultural" role="listitem">Cultural</button>
+          </div>
+          <div class="portfolio-filters__sort">
+            <label for="sort-select" class="sr-only">Sort by</label>
+            <select id="sort-select" aria-label="Sort portfolio">
+              <option value="newest">Newest First</option>
+              <option value="oldest">Oldest First</option>
+              <option value="material">By Material</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PORTFOLIO GRID -->
+    <section class="portfolio-grid-section section-pad" aria-label="Portfolio gallery">
+      <div class="container">
+        <div class="portfolio__grid" id="portfolio-grid" role="list">
+
+          <!-- Item 1 -->
+          <article class="portfolio__item" data-category="evening" data-material="silk" data-date="2025" role="listitem" tabindex="0" aria-label="The Éclat Gown - Evening wear in silk">
+            <div class="portfolio__visual">
+              <div class="portfolio__image" style="background: #EDE9DF;" aria-hidden="true">
+                <svg viewBox="0 0 340 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="340" height="480" fill="#EDE9DF"/>
+                  <path d="M170 60 Q200 80 215 160 Q230 260 225 380 Q220 440 215 480 L125 480 Q120 440 115 380 Q110 260 125 160 Q140 80 170 60Z" fill="#C9A96E" opacity="0.25"/>
+                  <path d="M170 60 Q155 70 148 90 Q135 130 138 200" stroke="#C9A96E" stroke-width="1.5" fill="none"/>
+                  <path d="M170 60 Q185 70 192 90 Q205 130 202 200" stroke="#C9A96E" stroke-width="1.5" fill="none"/>
+                  <line x1="120" y1="220" x2="220" y2="220" stroke="#8A8880" stroke-width="0.5" stroke-dasharray="3,3"/>
+                  <text x="170" y="310" text-anchor="middle" fill="#8A8880" font-family="Georgia, serif" font-size="10" font-style="italic" letter-spacing="3">Éclat</text>
+                </svg>
+              </div>
+              <div class="portfolio__overlay">
+                <button class="portfolio__view-btn" onclick="openModal('eclat')" aria-label="View details for The Éclat Gown">
+                  View Piece
+                </button>
+              </div>
+            </div>
+            <div class="portfolio__info">
+              <div class="portfolio__tags">
+                <span class="portfolio__tag">Evening</span>
+                <span class="portfolio__tag">Silk</span>
+              </div>
+              <h2 class="portfolio__title">The Éclat Gown</h2>
+              <p class="portfolio__sub">Ivory silk with asymmetric drape. Gala commission, 2025.</p>
+            </div>
+          </article>
+
+          <!-- Item 2 -->
+          <article class="portfolio__item" data-category="tailoring" data-material="wool" data-date="2025" role="listitem" tabindex="0" aria-label="The Obsidian Suit">
+            <div class="portfolio__visual">
+              <div class="portfolio__image" style="background: #1A1A17;" aria-hidden="true">
+                <svg viewBox="0 0 340 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="340" height="480" fill="#1A1A17"/>
+                  <rect x="110" y="70" width="120" height="190" rx="2" fill="#C9A96E" opacity="0.15"/>
+                  <rect x="110" y="70" width="120" height="190" stroke="#C9A96E" stroke-width="0.8" fill="none"/>
+                  <line x1="170" y1="260" x2="170" y2="460" stroke="#C9A96E" stroke-width="0.5" opacity="0.6"/>
+                  <line x1="120" y1="460" x2="220" y2="460" stroke="#C9A96E" stroke-width="0.5" opacity="0.4"/>
+                  <line x1="160" y1="100" x2="180" y2="100" stroke="#C9A96E" stroke-width="1" opacity="0.8"/>
+                  <text x="170" y="200" text-anchor="middle" fill="#C9A96E" font-family="Georgia, serif" font-size="10" font-style="italic" letter-spacing="2" opacity="0.6">Obsidian</text>
+                </svg>
+              </div>
+              <div class="portfolio__overlay">
+                <button class="portfolio__view-btn" onclick="openModal('obsidian')" aria-label="View details for The Obsidian Suit">
+                  View Piece
+                </button>
+              </div>
+            </div>
+            <div class="portfolio__info">
+              <div class="portfolio__tags">
+                <span class="portfolio__tag">Tailoring</span>
+                <span class="portfolio__tag">Wool Crepe</span>
+              </div>
+              <h2 class="portfolio__title">The Obsidian Suit</h2>
+              <p class="portfolio__sub">Sculpted two-piece in midnight wool. Executive commission.</p>
+            </div>
+          </article>
+
+          <!-- Item 3 -->
+          <article class="portfolio__item portfolio__item--featured" data-category="bridal" data-material="satin" data-date="2025" role="listitem" tabindex="0" aria-label="The Douceur Bridal Gown">
+            <div class="portfolio__visual">
+              <div class="portfolio__image" style="background: #F7F0E6;" aria-hidden="true">
+                <svg viewBox="0 0 340 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="340" height="480" fill="#F7F0E6"/>
+                  <path d="M170 40 Q190 55 200 90 Q220 150 230 260 Q240 360 260 480 L80 480 Q100 360 110 260 Q120 150 140 90 Q150 55 170 40Z" fill="#C9A96E" opacity="0.12"/>
+                  <path d="M145 55 Q155 48 170 40 Q185 48 195 55" stroke="#8A8880" stroke-width="1" fill="none"/>
+                  <circle cx="170" cy="35" r="16" fill="none" stroke="#C9A96E" stroke-width="0.5"/>
+                  <path d="M140 130 Q160 145 180 140 Q200 135 210 130" stroke="#8A8880" stroke-width="0.5" fill="none"/>
+                  <text x="170" y="300" text-anchor="middle" fill="#8A8880" font-family="Georgia, serif" font-size="10" font-style="italic" letter-spacing="3">Douceur</text>
+                  <text x="170" y="360" text-anchor="middle" fill="#C9A96E" font-family="Georgia, serif" font-size="8" letter-spacing="4" opacity="0.7">BRIDAL</text>
+                </svg>
+              </div>
+              <div class="portfolio__overlay">
+                <button class="portfolio__view-btn" onclick="openModal('douceur')" aria-label="View details for The Douceur Bridal Gown">
+                  View Piece
+                </button>
+              </div>
+            </div>
+            <div class="portfolio__info">
+              <div class="portfolio__tags">
+                <span class="portfolio__tag">Bridal</span>
+                <span class="portfolio__tag">Duchess Satin</span>
+              </div>
+              <h2 class="portfolio__title">The Douceur Gown</h2>
+              <p class="portfolio__sub">Cathedral-length bridal gown. Soft structured bodice, bespoke for Lagos ceremony.</p>
+            </div>
+          </article>
+
+          <!-- Item 4 -->
+          <article class="portfolio__item" data-category="cultural" data-material="aso-oke" data-date="2024" role="listitem" tabindex="0" aria-label="Àṣà Cultural Ensemble">
+            <div class="portfolio__visual">
+              <div class="portfolio__image" style="background: #2D1810;" aria-hidden="true">
+                <svg viewBox="0 0 340 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="340" height="480" fill="#2D1810"/>
+                  <rect x="100" y="80" width="140" height="320" rx="2" fill="#C9A96E" opacity="0.2"/>
+                  <!-- Pattern lines -->
+                  <line x1="100" y1="120" x2="240" y2="120" stroke="#C9A96E" stroke-width="0.5" opacity="0.4"/>
+                  <line x1="100" y1="160" x2="240" y2="160" stroke="#C9A96E" stroke-width="0.5" opacity="0.4"/>
+                  <line x1="100" y1="200" x2="240" y2="200" stroke="#C9A96E" stroke-width="0.5" opacity="0.4"/>
+                  <line x1="100" y1="240" x2="240" y2="240" stroke="#C9A96E" stroke-width="0.5" opacity="0.4"/>
+                  <line x1="100" y1="280" x2="240" y2="280" stroke="#C9A96E" stroke-width="0.5" opacity="0.4"/>
+                  <line x1="100" y1="320" x2="240" y2="320" stroke="#C9A96E" stroke-width="0.5" opacity="0.4"/>
+                  <line x1="100" y1="360" x2="240" y2="360" stroke="#C9A96E" stroke-width="0.5" opacity="0.4"/>
+                  <!-- Diagonal stripe suggestion -->
+                  <path d="M100 80 L240 200" stroke="#8A6A3C" stroke-width="1" opacity="0.3"/>
+                  <path d="M100 160 L240 280" stroke="#8A6A3C" stroke-width="1" opacity="0.3"/>
+                  <text x="170" y="220" text-anchor="middle" fill="#C9A96E" font-family="Georgia, serif" font-size="10" font-style="italic" letter-spacing="2" opacity="0.8">Àṣà</text>
+                </svg>
+              </div>
+              <div class="portfolio__overlay">
+                <button class="portfolio__view-btn" onclick="openModal('asa')" aria-label="View details for Àṣà Cultural Ensemble">
+                  View Piece
+                </button>
+              </div>
+            </div>
+            <div class="portfolio__info">
+              <div class="portfolio__tags">
+                <span class="portfolio__tag">Cultural</span>
+                <span class="portfolio__tag">Aso-Oke</span>
+              </div>
+              <h2 class="portfolio__title">Àṣà Ensemble</h2>
+              <p class="portfolio__sub">Traditional Yoruba-inspired silhouette, reimagined for contemporary celebration.</p>
+            </div>
+          </article>
+
+          <!-- Item 5 -->
+          <article class="portfolio__item" data-category="evening" data-material="velvet" data-date="2024" role="listitem" tabindex="0" aria-label="The Nuit Evening Cape">
+            <div class="portfolio__visual">
+              <div class="portfolio__image" style="background: #151525;" aria-hidden="true">
+                <svg viewBox="0 0 340 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="340" height="480" fill="#151525"/>
+                  <path d="M170 60 Q210 80 240 140 Q280 220 280 340 Q280 420 260 480 L80 480 Q60 420 60 340 Q60 220 100 140 Q130 80 170 60Z" fill="#534AB7" opacity="0.2"/>
+                  <path d="M170 60 Q190 80 200 120" stroke="#8888CC" stroke-width="1" fill="none"/>
+                  <path d="M170 60 Q150 80 140 120" stroke="#8888CC" stroke-width="1" fill="none"/>
+                  <text x="170" y="290" text-anchor="middle" fill="#8888CC" font-family="Georgia, serif" font-size="10" font-style="italic" letter-spacing="3">Nuit</text>
+                </svg>
+              </div>
+              <div class="portfolio__overlay">
+                <button class="portfolio__view-btn" onclick="openModal('nuit')" aria-label="View details for The Nuit Cape">
+                  View Piece
+                </button>
+              </div>
+            </div>
+            <div class="portfolio__info">
+              <div class="portfolio__tags">
+                <span class="portfolio__tag">Evening</span>
+                <span class="portfolio__tag">Velvet</span>
+              </div>
+              <h2 class="portfolio__title">The Nuit Cape</h2>
+              <p class="portfolio__sub">Midnight blue velvet cape commissioned for an awards evening.</p>
+            </div>
+          </article>
+
+          <!-- Item 6 -->
+          <article class="portfolio__item" data-category="casual" data-material="linen" data-date="2024" role="listitem" tabindex="0" aria-label="The Soleil Resort Set">
+            <div class="portfolio__visual">
+              <div class="portfolio__image" style="background: #F2EAD8;" aria-hidden="true">
+                <svg viewBox="0 0 340 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="340" height="480" fill="#F2EAD8"/>
+                  <rect x="120" y="80" width="100" height="120" rx="2" fill="#C9A96E" opacity="0.2"/>
+                  <rect x="100" y="240" width="140" height="200" rx="2" fill="#C9A96E" opacity="0.15"/>
+                  <line x1="120" y1="200" x2="220" y2="200" stroke="#C9A96E" stroke-width="1"/>
+                  <text x="170" y="170" text-anchor="middle" fill="#8A8880" font-family="Georgia, serif" font-size="10" font-style="italic" letter-spacing="2">Soleil</text>
+                </svg>
+              </div>
+              <div class="portfolio__overlay">
+                <button class="portfolio__view-btn" onclick="openModal('soleil')" aria-label="View details for The Soleil Resort Set">
+                  View Piece
+                </button>
+              </div>
+            </div>
+            <div class="portfolio__info">
+              <div class="portfolio__tags">
+                <span class="portfolio__tag">Casual Couture</span>
+                <span class="portfolio__tag">Linen</span>
+              </div>
+              <h2 class="portfolio__title">The Soleil Set</h2>
+              <p class="portfolio__sub">Resort-wear co-ord in handwashed Belgian linen. Made for a Lagos summer.</p>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Empty state -->
+        <div class="portfolio__empty" id="portfolio-empty" style="display: none;" role="status">
+          <p>No pieces found in this category.</p>
+          <button class="btn btn-outline" onclick="resetFilters()">View All Works</button>
+        </div>
+
+        <!-- Load more -->
+        <div class="portfolio__loadmore reveal">
+          <a href="order.html" class="btn btn-outline">
+            Commission Something New <span class="btn-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL -->
+  <div class="portfolio-modal" id="portfolio-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display: none;">
+    <div class="portfolio-modal__backdrop" onclick="closeModal()"></div>
+    <div class="portfolio-modal__panel">
+      <button class="portfolio-modal__close" onclick="closeModal()" aria-label="Close details">
+        <span aria-hidden="true">×</span>
+      </button>
+      <div class="portfolio-modal__content" id="modal-content">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">Livn<span>a</span></div>
+          <p class="footer__tagline">A bespoke fashion atelier creating beautiful, unique designs from a blank canvas.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram">IG</a>
+            <a href="#" class="footer__social-link" aria-label="Pinterest">PT</a>
+            <a href="#" class="footer__social-link" aria-label="Twitter">TW</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__heading">Navigate</h3>
+          <a href="index.html"     class="footer__link">Home</a>
+          <a href="portfolio.html" class="footer__link">Our Works</a>
+          <a href="advice.html"    class="footer__link">Style Journal</a>
+          <a href="order.html"     class="footer__link">Commission</a>
+        </div>
+        <div>
+          <h3 class="footer__heading">Atelier</h3>
+          <a href="#" class="footer__link">About Livna</a>
+          <a href="#" class="footer__link">The Process</a>
+          <a href="#" class="footer__link">Materials</a>
+          <a href="#" class="footer__link">Contact</a>
+        </div>
+        <div>
+          <h3 class="footer__heading">The Journal</h3>
+          <p class="footer__tagline" style="max-width:100%; font-size:0.82rem;">Subscribe for style insights and new commissions.</p>
+          <div class="footer__newsletter">
+            <input type="email" placeholder="Your email address" aria-label="Email for newsletter" />
+            <button type="button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2025 Livna. All rights reserved.</p>
+        <p class="footer__copy">Crafted with intention, Lagos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/portfolio.js"></script>
+</body>
+</html>
